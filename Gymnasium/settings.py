@@ -150,7 +150,7 @@ STATIC_URL = '/static/'
 '''STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]'''
-STATIC_ROOT = 'static'  # Directory where collectstatic gathers files
+STATIC_ROOT = 'staticfiles'  # Directory where collectstatic gathers files
 
 # Media files
 MEDIA_URL = '/media/'
