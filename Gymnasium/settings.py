@@ -139,22 +139,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-#STATIC_URL = '/static/'
 
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
 
+# Directory where collectstatic will place all static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Corrected absolute path for production
+
+# Additional directories containing static files (e.g., your project's 'static' folder)
 STATICFILES_DIRS = [
-    os.path.join( '/static'),
+    os.path.join(BASE_DIR, 'static'),  # Points to the 'static' folder in your project
 ]
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+# Media files (uploads by users)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# Media file locations for specific content
 WALLPAPER_FILES = os.path.normpath(os.path.join(MEDIA_ROOT, 'wallpaper'))
 WALLPAPER_URL = os.path.normpath(os.path.join(MEDIA_URL, 'wallpaper/'))
 
