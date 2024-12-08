@@ -141,28 +141,27 @@ USE_TZ = True
 
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 STATIC_URL = '/static/'
 
-# Directory where collectstatic will place all static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Corrected absolute path for production
-
-# Additional directories containing static files (e.g., your project's 'static' folder)
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Points to the 'static' folder in your project
+    os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where collectstatic gathers files
 
-# Media files (uploads by users)
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Media files
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for uploaded files
 
-# Media file locations for specific content
-WALLPAPER_FILES = os.path.normpath(os.path.join(MEDIA_ROOT, 'wallpaper'))
-WALLPAPER_URL = os.path.normpath(os.path.join(MEDIA_URL, 'wallpaper/'))
+# Custom directories
+WALLPAPER_FILES = os.path.join(MEDIA_ROOT, 'wallpaper')
+WALLPAPER_URL = f"{MEDIA_URL}wallpaper/"
 
-PHOTOS_FILES = os.path.normpath(os.path.join(MEDIA_ROOT, 'photos'))
-PHOTOS_URL = os.path.normpath(os.path.join(MEDIA_URL, 'photos/'))
+PHOTOS_FILES = os.path.join(MEDIA_ROOT, 'photos')
+PHOTOS_URL = f"{MEDIA_URL}photos/"
 
 LOGIN_REDIRECT_URL = 'homepage_after_login'
 
