@@ -147,10 +147,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Static files
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
+'''STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where collectstatic gathers files
+]'''
+STATIC_ROOT = 'static'  # Directory where collectstatic gathers files
 
 # Media files
 MEDIA_URL = '/media/'
