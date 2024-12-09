@@ -139,7 +139,8 @@ STATIC_URL = 'static/'
     os.path.join(BASE_DIR, 'expenses', 'static'),
 ]"""
 # Add or update the STATIC_ROOT setting
-STATIC_ROOT = 'static'
+#STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
