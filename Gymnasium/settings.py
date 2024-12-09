@@ -149,6 +149,6 @@ PHOTOS_FILES = os.path.normpath(MEDIA_ROOT+'/photos')
 PHOTOS_URL = os.path.normpath(MEDIA_URL+'/photos/')
 
 LOGIN_REDIRECT_URL = 'homepage_after_login'
-#LOGOUT_REDIRECT_URL = 'login'
+#LOGOUT_REDIRECT_URL = 'lo
 
 INTERNAL_IPS = ['127.0.0.1']
